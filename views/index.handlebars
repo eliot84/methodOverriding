@@ -1,0 +1,10 @@
+hello puppet {{products.length}}
+
+<ul>
+	{{#each products}}
+		<li>{{this.name}} {{this.id}}</li>
+		<form method="POST" action="/{{this.name}}?_method=DELETE">
+		<button type="submit">DELETE</button>
+		<form>
+	{{/each}}
+</ul>
